@@ -1237,7 +1237,7 @@
             "osType": "Windows",
             "createOption": "FromImage",
             "image": {
-              "uri": "[concat('https://',parameters('newStorageAccount'),'.blob.core.windows.net/destinationvhds/Microsoft.Compute/Images/vhds/template-osDisk.e00e29d5-eb33-4227-99a0-556c8e691bf3.vhd')]"
+              "uri": "[concat('https://',parameters('newStorageAccount'),'.blob.core.windows.net/destinationvhds/Microsoft.Compute/Images/vhds/template-osDisk.3c1b9f06-b5d1-483f-afb7-5c99390c4812.vhd')]"
             },
             "vhd": {
               "uri": "[concat('http://',parameters('newStorageAccount'),'.blob.core.windows.net/vhds/cl01-osdisk.vhd')]"
@@ -1360,7 +1360,7 @@
             "osType": "Windows",
             "createOption": "FromImage",
             "image": {
-              "uri": "[concat('https://',parameters('newStorageAccount'),'.blob.core.windows.net/destinationvhds/Microsoft.Compute/Images/vhds/template-osDisk.e00e29d5-eb33-4227-99a0-556c8e691bf3.vhd')]"
+              "uri": "[concat('https://',parameters('newStorageAccount'),'.blob.core.windows.net/destinationvhds/Microsoft.Compute/Images/vhds/template-osDisk.3c1b9f06-b5d1-483f-afb7-5c99390c4812.vhd')]"
             },
             "vhd": {
               "uri": "[concat('http://',parameters('newStorageAccount'),'.blob.core.windows.net/vhds/cl02-osdisk.vhd')]"
