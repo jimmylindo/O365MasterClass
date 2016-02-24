@@ -578,7 +578,7 @@
             "typeHandlerVersion": "1.4",
             "settings": {
                 "fileUris": [
-                "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+                "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
             ],
             "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
             }
@@ -748,7 +748,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
@@ -769,7 +769,7 @@
         "type": "DSC",
         "typeHandlerVersion": "2.9",
         "settings": {
-          "ModulesUrl": "https://threesixfivelab.blob.core.windows.net/scripts/InstallExchange.ps1.zip",
+          "ModulesUrl": "[concat(parameters('assetLocation'),'InstallExchange.ps1.zip')]",
           "ConfigurationFunction": "InstallExchange.ps1\\InstallExchange",
           "Properties": {
             "ExOrgName": "ACME",
@@ -908,7 +908,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
@@ -1036,7 +1036,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
@@ -1169,7 +1169,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
@@ -1292,7 +1292,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
@@ -1415,7 +1415,7 @@
         "typeHandlerVersion": "1.4",
         "settings": {
             "fileUris": [
-            "https://365lab.blob.core.windows.net/scripts/Finalize-MasterClassVM.ps1"
+            "[concat(parameters('assetLocation'),'Finalize-MasterClassVM.ps1')]"
         ],
         "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File Finalize-MasterClassVM.ps1"
         }
