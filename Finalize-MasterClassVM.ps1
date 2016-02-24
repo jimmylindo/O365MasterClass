@@ -1,7 +1,8 @@
 ﻿param (
     [switch]$InstallExchange
 )
-$LabFilesSource = "https://365lab.blob.core.windows.net/content/{0}.zip" -f $env:COMPUTERNAME
+$SourcePath = 'https://raw.githubusercontent.com/jimmylindo/O365MasterClass/master/'
+$LabFilesSource = "{0}{1}.zip" -f $SourcePath,$env:COMPUTERNAME
 # Install mandatory features on all machines
 $AdminUsername = 'corp\sysadmin'
 $AdminPassword = (ConvertTo-SecureString -AsPlainText 'Pa$$w0rd' -Force)
@@ -933,8 +934,8 @@ Expand-ZIPFile -File "c:\temp\$($env:COMPUTERNAME).zip" -Destination C:\LabFiles
             New-ADOrganizationalUnit -Path "OU=ACME,DC=corp,DC=acme,DC=com" -Name "Contacts" -ProtectedFromAccidentalDeletion $false
         }
         #region create test users
-      
-        Invoke-WebRequest -Uri https://threesixfivelab.blob.core.windows.net/scripts/FirstLastEurope.csv -OutFile C:\temp\FirstLastEurope.csv -UseBasicParsing
+        $SourceFile = "{0}FirstLastEurope.csv" -f $SourcePath
+        Invoke-WebRequest -Uri $SourceFile -OutFile C:\temp\FirstLastEurope.csv -UseBasicParsing
         $Names = Import-CSV C:\Temp\FirstLastEurope.csv | Select-Object -First 50
         
         $Session = New-PSSession -ConnectionUri http://acme-ex01/powershell -ConfigurationName Microsoft.Exchange -Authentication Kerberos -Credential $credentials
@@ -1117,7 +1118,8 @@ Expand-ZIPFile -File "c:\temp\$($env:COMPUTERNAME).zip" -Destination C:\LabFiles
         }
         if ($env:COMPUTERNAME -eq "ACME-CL01") {
             Write-Log -LogType INFO -LogString "Starting to Download Office 365 ProPlus"
-            Start-BitsTransfer -Source https://365lab.blob.core.windows.net/scripts/Office365ProPlus.zip -Destination C:\Temp
+            $Source = "{0}Office365ProPlus.zip" -f $SourcePath
+            Start-BitsTransfer -Source $source -Destination C:\Temp
             Write-Log -LogType INFO -LogString "Successfully downloaded Office 365 ProPlus"
             Write-Log -LogType INFO -LogString "Starting to extract and Install Office 365 ProPlus"
             Expand-ZIPFile C:\temp\Office365ProPlus.zip -Destination C:\Temp
